@@ -8,6 +8,7 @@ from time import sleep
 
 def get_flow_data(infile):
     df = pd.read_csv(infile)
+    df.sort_values("Time", inplace=True)
     response = df.to_json(orient='records')
     return response
 
