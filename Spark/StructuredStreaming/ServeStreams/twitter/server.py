@@ -33,8 +33,6 @@ def send_tweets_to_spark(http_resp, tcp_connection):
 
 
 if __name__ == "__main__":
-    set_secrets()
-
     my_auth = requests_oauthlib.OAuth1(os.environ["CONSUMER_KEY"],
                                        os.environ["CONSUMER_SECRET"],
                                        os.environ["ACCESS_TOKEN"],
